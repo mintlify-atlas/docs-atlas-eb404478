@@ -1,0 +1,160 @@
+{
+  "projectType": "saas",
+  "projectName": "The Hundred",
+  "projectDescription": "Guild management platform for Albion Online with member tracking, CTA scheduling, attendance points, and Discord integration.",
+  "theme": "almond",
+  "primaryColor": "#dbd1a5",
+  "lightColor": "#878785",
+  "darkColor": "#191812",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart"
+            ]
+          },
+          {
+            "group": "Platform",
+            "pages": [
+              "platform/authentication",
+              "platform/member-management",
+              "platform/cta-system",
+              "platform/attendance-points",
+              "platform/compositions",
+              "platform/battle-tracking"
+            ]
+          },
+          {
+            "group": "Discord Bot",
+            "pages": [
+              "discord/setup",
+              "discord/commands",
+              "discord/role-sync"
+            ]
+          },
+          {
+            "group": "Deployment",
+            "pages": [
+              "deployment/overview",
+              "deployment/web-vercel",
+              "deployment/api-render",
+              "deployment/bot-docker",
+              "deployment/supabase"
+            ]
+          },
+          {
+            "group": "Development",
+            "pages": [
+              "development/architecture",
+              "development/monorepo",
+              "development/environment-setup"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "Authentication",
+            "pages": [
+              "api/auth/discord-start",
+              "api/auth/discord-callback",
+              "api/auth/me"
+            ]
+          },
+          {
+            "group": "Members",
+            "pages": [
+              "api/members/register",
+              "api/members/list",
+              "api/members/update-status",
+              "api/members/kick"
+            ]
+          },
+          {
+            "group": "CTAs",
+            "pages": [
+              "api/ctas/list",
+              "api/ctas/create",
+              "api/ctas/finalize",
+              "api/ctas/assign-slot"
+            ]
+          },
+          {
+            "group": "Compositions",
+            "pages": [
+              "api/comps/list",
+              "api/comps/save",
+              "api/comps/delete"
+            ]
+          },
+          {
+            "group": "Builds",
+            "pages": [
+              "api/builds/list",
+              "api/builds/save",
+              "api/builds/delete"
+            ]
+          },
+          {
+            "group": "Ranking & Performance",
+            "pages": [
+              "api/ranking/get",
+              "api/battles/list",
+              "api/battles/detail"
+            ]
+          },
+          {
+            "group": "Public",
+            "pages": [
+              "api/public/slots",
+              "api/public/performance",
+              "api/public/health"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Discord OAuth authentication",
+    "Member recruitment and role management",
+    "CTA scheduling with composition assignment",
+    "Attendance tracking and points system",
+    "Performance ranking and battle analysis",
+    "Build templates and team compositions",
+    "Discord bot with slash commands",
+    "Council task management",
+    "Supabase and in-memory repository support"
+  ],
+  "publicApiSurface": [
+    "GET /auth/discord/start",
+    "GET /auth/discord/callback",
+    "GET /me",
+    "POST /register",
+    "GET /members",
+    "POST /members/:id/status",
+    "GET /ctas",
+    "POST /ctas",
+    "POST /ctas/:id/finalize",
+    "GET /comps",
+    "POST /comps",
+    "GET /builds",
+    "POST /builds",
+    "GET /ranking",
+    "GET /battles",
+    "GET /public/slots",
+    "GET /public/performance",
+    "/slots - Show open guild slots",
+    "/recruit - Approve member for guild access",
+    "/syncmember - Sync Discord roles with web status",
+    "/crearcta - Create CTA with composition",
+    "/finalizarcta - Finalize CTA and freeze signups"
+  ]
+}
